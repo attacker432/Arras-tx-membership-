@@ -176,7 +176,7 @@ async function getLockdownPage (req, res, next){
                  //   asn = ipInfo.asn;
                 // if (bannedASNs.includes(socket.asn)){socket.ASNban(asn)};
                 }
-    logWithFile(req.ip+' Attempted to break trough the lockdown.');
+   // logWithFile(req.ip+' Attempted to break trough the lockdown.');
       
     // ===================================================================
   /*
@@ -195,16 +195,16 @@ async function getLockdownPage (req, res, next){
              } */
 };
   // create a custom timestamp format for log statements
-const SimpleNodeLogger = require('simple-node-logger'),
+/* const SimpleNodeLogger = require('simple-node-logger'),
     Logger = SimpleNodeLogger.createRollingFileLogger({
         logDirectory: __dirname + '../../iplog',
            fileNamePattern:'acces-<DATE>.txt',
         dateFormat:'YYYY-MM-DD',
         //level: 'info',
         level: 'warn',
-    });
+    }); */
 
-function logWithFile(log) {console.log(log), Logger.info(log)};// define the logger in a function.
+//function logWithFile(log) {console.log(log), Logger.info(log)};// define the logger in a function.
 async function getRegistrationPage (req, res, next){  
   try {
     if (!globals.Settings.allowMemberRegistration){
